@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"  content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>OpenLayers</title>
+    <style>
+      html, body, .fullscreen {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .conrolWrapper {
+        background-color: rgba(255, 255, 255, 0.77);
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 175px;
+        width: 300px;
+        z-index: 11;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      #search {
+        z-index: 12;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 250px;
+        background-color: rgba(255, 255, 255, 0.5);
+        z-index: 10;
+        font-size: 1.5em;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+        border: none;
+      }
+
+      #control {
+        z-index: 12;
+        position: absolute;
+        top: 75px;
+        right: 20px;
+        width: 250px;
+        z-index: 10;
+        font-size: 1.5em;
+        color: rgb(36, 37, 37);
+        /* background-color: rgba(249, 249, 249, 0.78); */
+      }
+
+      .rb {
+        cursor: pointer;
+        background-color: rgb(255, 113, 0);
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="conrolWrapper">
+      <input type="text" id="search" placeholder="Suche..."></input>
+      <div id="control">
+        <label class="radio">
+          <input class="rb" id="base" type="radio" name="foobar" checked>
+          Base-Layer OSM
+        </label><br>
+        <label class="radio">
+          <input class="rb" id="sat" type="radio" name="foobar">
+          Sattelite
+        </label>
+      </div>
+    </div>
+
+    <div id="map" class="fullscreen">
+    </div>
+  </body>
+</html>
